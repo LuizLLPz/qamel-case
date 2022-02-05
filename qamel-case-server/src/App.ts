@@ -1,8 +1,9 @@
 import App from "express";
 import { ApolloServer, gql } from "apollo-server-express";
-import dotenv from "dotenv";
+import { config } from "dotenv-safe";
+
 async function init () {
-	
+	config();
 	const typeDefs = gql`
 	# Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
