@@ -1,0 +1,1118 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"reload"
+			],
+			[
+				"checkU",
+				"CheckUserDocument"
+			],
+			[
+				"update",
+				"updateQuery"
+			],
+			[
+				"exchan",
+				"exchange-graphcache"
+			],
+			[
+				"Navb",
+				"NavbarItem"
+			],
+			[
+				"erro",
+				"errorCode"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"color",
+				"colorScheme"
+			],
+			[
+				"is",
+				"isLoading"
+			],
+			[
+				"res",
+				"resultName"
+			],
+			[
+				"error",
+				"errorCode"
+			],
+			[
+				"create",
+				"createClient"
+			],
+			[
+				"n",
+				"name"
+			],
+			[
+				"Form",
+				"FormControl"
+			],
+			[
+				"on",
+				"onSubmit"
+			],
+			[
+				"ini",
+				"initialValues"
+			],
+			[
+				"Reg",
+				"Register"
+			],
+			[
+				"Reques",
+				"Request"
+			],
+			[
+				"red",
+				"redisClient"
+			],
+			[
+				"redis",
+				"redisClient"
+			],
+			[
+				"connec",
+				"connect-redis"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"delete",
+				"deleteOne"
+			],
+			[
+				"dele",
+				"deleteOne"
+			],
+			[
+				"fin",
+				"findOne"
+			],
+			[
+				"persi",
+				"persistAndFlush"
+			],
+			[
+				"persis",
+				"persistAndFlush"
+			],
+			[
+				"Exa",
+				"ExampleResolver"
+			],
+			[
+				"OR",
+				"ORMConnectionType"
+			],
+			[
+				"mikro",
+				"@mikro-orm/core"
+			],
+			[
+				"appl",
+				"applyMiddleware"
+			],
+			[
+				"apollo",
+				"apollo-server-express"
+			],
+			[
+				"getM",
+				"getMigrator"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"per",
+				"persistAndFlush"
+			],
+			[
+				"m",
+				"@mikro-orm/core"
+			],
+			[
+				"consta",
+				"constants.ts"
+			],
+			[
+				"set",
+				"setFiltro"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"alter",
+				"alterTodo"
+			],
+			[
+				"text",
+				"textValue"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"t",
+				"text-align"
+			],
+			[
+				"flex",
+				"flex-basis"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"todo",
+				"todo-container"
+			],
+			[
+				"Todo",
+				"TodoForm"
+			],
+			[
+				"flex-",
+				"flex-direction"
+			],
+			[
+				"fil",
+				"filterFunction"
+			],
+			[
+				"fi",
+				"filteredJobs"
+			],
+			[
+				"setF",
+				"setFiltereds"
+			],
+			[
+				"filter",
+				"filteredJobs"
+			],
+			[
+				"filte",
+				"filteredJobs"
+			],
+			[
+				"filtere",
+				"filteredJobs"
+			],
+			[
+				"rounded-",
+				"rounded-3xl "
+			],
+			[
+				"select",
+				"selectedFilters"
+			],
+			[
+				"bg",
+				"bg-teal-600"
+			],
+			[
+				"align",
+				"align-baseline "
+			],
+			[
+				"py",
+				"sm:py-0 "
+			],
+			[
+				"border",
+				"sm:border-0 "
+			],
+			[
+				"w",
+				"sm:w-32 "
+			],
+			[
+				"bt",
+				"border-t-2 "
+			],
+			[
+				"border-gray",
+				"border-gray-300 "
+			],
+			[
+				"-mb-",
+				"-mb-12 "
+			],
+			[
+				"-m",
+				"-m-12 "
+			],
+			[
+				"m-w",
+				"max-w-0 "
+			],
+			[
+				"b",
+				"bg-teal-700"
+			],
+			[
+				"text-",
+				"text-xl"
+			],
+			[
+				"rounded",
+				"rounded-3xl "
+			],
+			[
+				"lang",
+				"langsAndTools"
+			],
+			[
+				"font-",
+				"font-semibold "
+			],
+			[
+				"text-ind",
+				"text-indigo-500 "
+			],
+			[
+				"text-bl",
+				"text-blue-800 "
+			],
+			[
+				"text-gray",
+				"text-gray-100 "
+			],
+			[
+				"shadow",
+				"shadow-xl "
+			],
+			[
+				"just",
+				"justify-center "
+			],
+			[
+				"justi",
+				"justify-center "
+			],
+			[
+				"rounde",
+				"rounded-2xl "
+			],
+			[
+				"border-r",
+				"border-r-2 "
+			],
+			[
+				"p-",
+				"p-10 "
+			],
+			[
+				"bg-",
+				"bg-blue-400 "
+			],
+			[
+				"gap",
+				"gap-1 "
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"Job",
+				"JobBoardComponent"
+			],
+			[
+				"prod",
+				"product__card"
+			],
+			[
+				"c",
+				"column"
+			],
+			[
+				"text-ali",
+				"text-align"
+			],
+			[
+				"navbar",
+				"navbar__carrinho"
+			],
+			[
+				"navbar__",
+				"navbar__user"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"na",
+				"navbar"
+			],
+			[
+				"dis",
+				"disabled"
+			],
+			[
+				"selec",
+				"selected"
+			],
+			[
+				"nav",
+				"navbar-categorias"
+			],
+			[
+				"navb",
+				"navbar__user"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"--co",
+				"--cor-texto"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"alig",
+				"align-self"
+			],
+			[
+				"hea",
+				"header__presentation"
+			],
+			[
+				"ani",
+				"animation"
+			],
+			[
+				"animation",
+				"animation-delay"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"header",
+				"header__card"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"tran",
+				"transition-duration"
+			],
+			[
+				"--",
+				"--texto-head"
+			],
+			[
+				"gra",
+				"grayscale()"
+			],
+			[
+				"transition-",
+				"transition-property"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"transti",
+				"transition-property"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
+				"transition",
+				"transition-duration"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"deta",
+				"details__text"
+			],
+			[
+				"pree",
+				"presentation__details"
+			],
+			[
+				"pres",
+				"presentation__box"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ji",
+				"justify-content"
+			],
+			[
+				"details",
+				"details__text"
+			],
+			[
+				"pre",
+				"presentation__details"
+			],
+			[
+				"prese",
+				"presentation__heading"
+			],
+			[
+				"presentation__",
+				"presentation__heading"
+			],
+			[
+				"conte",
+				"conteudo__projetos"
+			],
+			[
+				"trans",
+				"transition-duration"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"k",
+				"Preferences: Emmet Key Bindings"
+			],
+			[
+				"emmet ke",
+				"Preferences: Emmet Key Bindings"
+			],
+			[
+				"ke",
+				"Preferences: Emmet Key Bindings"
+			],
+			[
+				"wrap",
+				"Emmet: Wrap with Abbreviation"
+			],
+			[
+				"module",
+				"Import Helper: Update source modules"
+			],
+			[
+				"prettier",
+				"JsPrettier: Format Code"
+			],
+			[
+				"zeal",
+				"Zeal: Search Selection"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Import Helper: Update source modules"
+			],
+			[
+				"upda",
+				"Import Helper: Initialize / Setup / Update modules"
+			],
+			[
+				"modul",
+				"Import Helper: Initialize / Setup / Update modules"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"format",
+				"JsPrettier: Format Code"
+			],
+			[
+				"modules",
+				"Import Helper: Initialize / Setup / Update modules"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"update ",
+				"Import Helper: Update source modules"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"import ",
+				"Import Helper: Update source modules"
+			],
+			[
+				"import he",
+				"Import Helper: Initialize / Setup / Update modules"
+			],
+			[
+				"import helper",
+				"Import Helper: List imports"
+			],
+			[
+				"import",
+				"Snippet: imports a module …"
+			],
+			[
+				"auto import",
+				"Import Helper: Initialize / Setup / Update modules"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: import",
+				"Snippet: imports a module …"
+			],
+			[
+				"insert import",
+				"Import Helper: Insert import"
+			],
+			[
+				"import help",
+				"Import Helper: Initialize / Setup / Update modules"
+			],
+			[
+				"import hel",
+				"Import Helper: List imports"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"import a",
+				"Snippet: imports a module …"
+			],
+			[
+				"terminu",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"terminus theme",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"term",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"ter",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"termi",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"termin",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"terminus k",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"terminal view",
+				"Preferences: Terminal View: Settings"
+			],
+			[
+				"terminal",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"terminal ",
+				"Preferences: Terminal View: Settings"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"termina",
+				"Terminality: Browse Commands..."
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"bracket",
+				"BracketHighlighter: Quick Start Guide"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"wra",
+				"Emmet: Wrap with Abbreviation"
+			],
+			[
+				"div",
+				"Package Control: Discover Packages"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"replace",
+				"RegReplace: Quick Start Guide"
+			],
+			[
+				"l",
+				"Live Server: Start"
+			],
+			[
+				"li",
+				"Live Server: Start"
+			],
+			[
+				"live",
+				"Live Server: Start"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"wr",
+				"Emmet: Wrap with Abbreviation"
+			],
+			[
+				"liv",
+				"Live Server: Start"
+			],
+			[
+				"w",
+				"Emmet: Wrap with Abbreviation"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"emmet sett",
+				"Preferences: Emmet Settings"
+			],
+			[
+				"",
+				"Color Picker"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"live ",
+				"Live Server: Start"
+			],
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"emoji",
+				"Emoji: Insert Emoji"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"server",
+				"Live Server: Start"
+			],
+			[
+				"ident",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/package.json",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/pages/_document.js",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/next.config.js",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/pages/index.jsx",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/styles/theme.js",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/.babelrc",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/pages/_app.js",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-web/pages/api/_document.js",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-server/package.json",
+		"/home/luizllp/Documentos/Programação/js/qamel-case/qamel-case-server/src/App.js",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/pages/index.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/resolvers/User.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/pages/login.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/components/navbar.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/pages/register.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphql/queries/posts.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphql/mutations/logout.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/utils/ssrcli.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/pages/_app.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/ssrProvider.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphql/queries/checkUser.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/generated/graphql.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/components/Input.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphql/mutations/checkUser.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphql/mutations/userResult.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphql/mutations/login.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/migrations/Migration20220123014234.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/entities/User.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphql/mutations/register.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps/tsconfig.json",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/package.json",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/codegen.yml",
+		"/home/luizllp/Documentos/Programação/js/socicomps/package.json",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/graphql/mutations/register.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/index.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/codegen.yml",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/graphqlQueries/mutations.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/graphql/reg.graphql",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/components/Container.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/pages/comunidades.tsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps-next/src/components/Main.js",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/types.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/node_modules/@apollo/protobufjs/node_modules/@types/node/repl.d.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/resolvers/Post.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/node_modules/agent-base/dist/src/index.d.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/resolvers/Example.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/mikro-orm.config.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/entities/Post.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/constants.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/node_modules/got/source/as-promise.js",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/resolvers/Hello.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/resolvers/hello.ts",
+		"/home/luizllp/Documentos/Programação/js/socicomps/dist/migrations/Migration20220116205641.js",
+		"/home/luizllp/Documentos/Programação/js/socicomps/dist/index.js",
+		"/home/luizllp/Documentos/Programação/js/socicomps/dist/micro-orm-config.js",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/test.ts",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/stl.css",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/components/TodoForm.jsx",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/components/Todo.jsx",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/App.js",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/components/Header.jsx",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/header.css",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/App.css",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/components/Todos.jsx",
+		"/home/luizllp/Documentos/Programação/js/todo-app/src/components/TodoHandler.jsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/components/fragments/header.jsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/App.js",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/components/fragments/apImage.jsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/components/fragments/imageSlider.jsx",
+		"/home/luizllp/Documentos/Programação/js/socicomps/src/components/fragments/contador.jsx",
+		"/home/luizllp/Área de Trabalho/projetinho-rapido/static/style.css",
+		"/home/luizllp/Área de Trabalho/projetinho-rapido/index.html",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/App.js",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/components/JobBoardComponent.jsx",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/assets/data.json",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/tailwind.config.js",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/assets/design/desktop-design.jpg",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/App.css",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/assets/design/desktop-preview.jpg",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/Conteudo.jsx",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/Header.jsx",
+		"/opt/lampp/htdocs/portfolio/negocios/css/phonewithtricks.css",
+		"/opt/lampp/htdocs/portfolio/negocios/pages/phonewithtricks.html",
+		"/opt/lampp/htdocs/portfolio/negocios/pages/home-peace.html",
+		"/opt/lampp/htdocs/portfolio/negocios/css/home-peace.css",
+		"/opt/lampp/htdocs/portfolio/static/css/style.css",
+		"/opt/lampp/htdocs/portfolio/index.html",
+		"/opt/lampp/htdocs/praticaphp/modules/config.php",
+		"/opt/lampp/htdocs/praticaphp/modules/exec_modules.php",
+		"/opt/lampp/htdocs/praticaphp/modules/db_operations/QueryHandler.php",
+		"/opt/lampp/htdocs/praticaphp/modules/db_operations/modelos.php",
+		"/opt/lampp/htdocs/praticaphp/pages/index.php",
+		"/opt/lampp/htdocs/praticaphp/modules/Router.php",
+		"/opt/lampp/htdocs/praticaphp/modules/url-mapper.php",
+		"/opt/lampp/htdocs/praticaphp/css/registrar.css",
+		"/opt/lampp/htdocs/praticaphp/css/forum.css",
+		"/opt/lampp/htdocs/praticaphp/css/main.css",
+		"/opt/lampp/htdocs/praticaphp/components/header.php",
+		"/opt/lampp/htdocs/praticaphp/views/register-map.php",
+		"/opt/lampp/htdocs/praticaphp/views/forum-map.php",
+		"/opt/lampp/htdocs/praticaphp/templates/metadata.php",
+		"/opt/lampp/htdocs/praticaphp/mappers/forum-map.php",
+		"/opt/lampp/htdocs/praticaphp/forum.php",
+		"/opt/lampp/htdocs/praticaphp/db_manager.php",
+		"/opt/lampp/htdocs/projetophp/b1.view.php",
+		"/opt/lampp/htdocs/projetophp/b2.php",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/components/Suporte.jsx",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/index.css",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/tailwind.css",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/index.js",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/reportWebVitals.js",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/public/index.html",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/craco.config.js",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/postcss.config.js",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/craco.config.js",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/package.json",
+		"/home/luizllp/Documentos/Programação/js/ProStop/pro-stop/src/styles.css",
+		"/home/luizllp/Documentos/Programação/js/portfolio-react/src/App.js",
+		"/opt/lampp/htdocs/applications.html",
+		"/home/luizllp/.config/sublime-merge/Packages/User/Preferences.sublime-settings",
+		"/opt/lampp/htdocs/tdeweb/index.html",
+		"/opt/lampp/htdocs/tdeweb/js/funcoes.js",
+		"/opt/lampp/htdocs/tdeweb/php/checarIntegridade.php",
+		"/opt/lampp/htdocs/tdeweb/php/listar.php",
+		"/opt/lampp/htdocs/tdeweb/php/inserir.php",
+		"/opt/lampp/htdocs/tdeweb/php/inicializar.php",
+		"/opt/lampp/htdocs/projeto/php/listar.php",
+		"/opt/lampp/htdocs/projeto/js/funcoes.js"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 170.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 78.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "README.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"laboratorio/static/css/parquinho.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 167.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
