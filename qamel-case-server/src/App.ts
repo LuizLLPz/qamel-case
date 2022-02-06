@@ -1,47 +1,33 @@
 import App from "express";
+import buildSchema from "type-graphql";
+import { User } from "graphql/resolvers/User";
 import { ApolloServer, gql } from "apollo-server-express";
+
 import { config } from "dotenv-safe";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient()
 
 async function init () {
+
 	config();
-	const typeDefs = gql`
-	# Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
+	const users = await prisma.user.findMany();
+	console.log(users);
+	const schema = await buildSchema({
+    	resolvers: [
+    		User
+    	],
+  	});
 
-  	# This "Book" type defines the queryable fields for every book in our data source.
-  	type Pergunta {
-    	titulo: String
-    	respostas: [String]
-  	}
+	const apollo = new ApolloServer({
+		schema
+	});
 
-  	type Query {
-    	perguntas: [Pergunta]
-  	}
-	
-	
-	`;
-
-	const Pergunta = [
-		{
-		  titulo: 'Qual o nome do seu melhor amigo de infância?',
-		  respostas: [],
-		},
-		{
-		  titulo: 'Qual sua cor favorita?',
-		  respostas: [],
-		},
-	  ];
-	const resolvers = {
-		Query: {
-		  perguntas: () => Pergunta,
-		},
-	  };
-
-	const apollo = new ApolloServer({typeDefs, resolvers});
 	const app = App();
 	await apollo.start();	
 	apollo.applyMiddleware({app});
-	app.listen(4000, function (){
-		console.log('Servidor iniciado na porta 4000');
+	app.listen(process.env.SERVER_PORT, function (){
+		console.log(`Server started on port ${process.env.SERVER_PORT}`);
 	});
 
 }
