@@ -7,7 +7,7 @@ export class User {
 	@Query(() => UserEntity)  
 	usuarioTeste () {
 	
-		return {name : 15, email : 'johndoe@example.com'};
+		return {name : 'John Doe', email : 'johndoe@example.com'};
 
 	}
 
