@@ -3,11 +3,8 @@ import App from "express";
 import { buildSchema } from "type-graphql";
 import { User } from "./graphql/resolvers/User";
 import { ApolloServer } from "apollo-server-express";
-
 import { config } from "dotenv-safe";
-import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient()
 
 async function init () {
 

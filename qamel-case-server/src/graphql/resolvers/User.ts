@@ -1,5 +1,6 @@
 import { Resolver, Query } from "type-graphql";
 import {User as UserEntity} from "../entities/User";
+import { client } from "../../utils/PrismaClient";
 
 @Resolver()
 export class User {
@@ -11,7 +12,11 @@ export class User {
 
 	}
 
-
+	@Query(() => [UserEntity])
+	async getAllUsers() {
+		const users = await client.user.findMany();
+		return users;
+	}
 
 }
 
