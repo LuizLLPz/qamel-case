@@ -59,9 +59,10 @@ export class User {
 		})
 		if (result) {
 			if (await argon2.verify(result.password, password)) {
+				const {username, email} = result
 				return {user : {
-					username: result.username,
-					email: result.email
+					username,
+					email
 				}} 
 			} else {
 				return {error: {title: 'Wrong Password', message: 'Incorrect password!'}};
@@ -81,8 +82,8 @@ export class User {
 		const hPass = await argon2.hash(password);
 		await client.user.create({
 			data: {
-				username : username,
-				email: email,
+				username,
+				email,
 				password: hPass,
 			}
 		});
