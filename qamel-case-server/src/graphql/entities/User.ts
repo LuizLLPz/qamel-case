@@ -5,15 +5,15 @@ import { ObjectType, Field } from 'type-graphql';
 export class User {
 
   @Field()
-  id: Number
+  id: number
 
   @Field()
-  name: String;
+  username: string;
 
   @Field()
-  email: String;
+  email: string;
 
   @Field()
-  password: String;
+  password: string;
 
 }
