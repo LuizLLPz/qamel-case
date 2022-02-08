@@ -52,11 +52,19 @@ export class User {
 	@Arg('username') username: string,
 	@Arg('password') password: string
 	) {
-		const result = await client.user.findUnique({
+		const resultuser = await client.user.findUnique({
   			where: {
     			username
   			},
-		})
+		}) 
+		const resultmain = resultuser ? await client.user.findUnique({
+  			where: {
+    			email: username
+  			},
+		}): null;
+
+		const result = [resultuser, resultmain].find(value => value);
+		
 		if (result) {
 			if (await argon2.verify(result.password, password)) {
 				const {username, email} = result
@@ -68,7 +76,7 @@ export class User {
 				return {error: {title: 'Wrong Password', message: 'Incorrect password!'}};
 			}
 		} else {
-			return {error: {title: 'No users found', message: 'No users found, incorrect email!'}};
+			return {error: {title: 'No users found', message: 'No users found with passed email or username!'}};
 		}
 	} 
 
