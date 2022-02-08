@@ -57,14 +57,14 @@ export class User {
     			username
   			},
 		}) 
-		const resultmain = resultuser ? await client.user.findUnique({
+		const resultmail = !resultuser ? await client.user.findUnique({
   			where: {
     			email: username
   			},
 		}): null;
+		console.log(resultmail)
+		const result = [resultuser, resultmail].find(value => value);
 
-		const result = [resultuser, resultmain].find(value => value);
-		
 		if (result) {
 			if (await argon2.verify(result.password, password)) {
 				const {username, email} = result
