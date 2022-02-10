@@ -40,6 +40,7 @@ export class User {
 
 	}
 
+
 	@Query(() => [UserEntity])
 	async getAllUsers() {
 		const users = await client.user.findMany();
@@ -87,7 +88,8 @@ export class User {
 		@Arg('password') password: string
 	) {
 		const hPass = await argon2.hash(password);
-		await client.user.create({
+		try {
+			await client.user.create({
 			data: {
 				username,
 				email,
@@ -95,6 +97,11 @@ export class User {
 			}
 		});
 		return 'OK'
+		} catch (error) {
+			console.log(error);
+			return '500 - Internal error when creating user, contact the administrator';
+		}
+		
 	}
 
 }

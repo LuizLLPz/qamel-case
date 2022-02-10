@@ -1,4 +1,4 @@
-import { Resolver, Query } from "type-graphql";
+import { Resolver, Query, Mutation, Arg } from "type-graphql";
 import { client } from '../../utils/PrismaClient';
 
 @Resolver()
@@ -9,4 +9,28 @@ export class Post {
         const res = client.post.findMany();
         return res;
     }
+
+
+    @Mutation(() => String)
+    async generatedPost(
+        @Arg('title') title: string,
+        @Arg('text') text: string,
+    ) {
+        try {
+            await client.post.create({
+            data: {
+                title,
+                text,
+                userID: 1,
+                createdAt: new Date(),
+            },
+            });
+            return 'OK'
+        } catch (error) {
+            console.log(error);
+            return '500 - Internal error when creating post, contact the administrator';
+        }
+       
+    }
+
 }
