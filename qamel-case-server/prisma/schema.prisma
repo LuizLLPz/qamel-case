@@ -12,4 +12,17 @@ model User {
   email String  @unique
   username  String @unique
   password String
+  posts   Post[]
 }
+
+
+model Post {
+  id Int @id @default(autoincrement())
+  title String
+  text String
+  createdAt DateTime 
+  author User @relation(fields: [userID], references: [id])
+  userID Int
+}
+
+  

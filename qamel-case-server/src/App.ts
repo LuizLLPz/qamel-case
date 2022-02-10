@@ -2,6 +2,7 @@ import "reflect-metadata";
 import App from "express";
 import { buildSchema } from "type-graphql";
 import { User } from "./graphql/resolvers/User";
+import { Post } from "./graphql/resolvers/Post";
 import { ApolloServer } from "apollo-server-express";
 import { config } from "dotenv-safe";
 
@@ -11,7 +12,8 @@ async function init () {
 	config();
 	const schema = await buildSchema({
     	resolvers: [
-    		User
+    		User,
+			Post
     	],
     	emitSchemaFile: true,
     	validate: false,

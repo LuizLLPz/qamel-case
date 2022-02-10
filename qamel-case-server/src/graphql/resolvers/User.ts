@@ -62,7 +62,6 @@ export class User {
     			email: username
   			},
 		}): null;
-		console.log(resultmail)
 		const result = [resultuser, resultmail].find(value => value);
 
 		if (result) {
