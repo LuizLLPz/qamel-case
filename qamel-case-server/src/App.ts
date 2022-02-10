@@ -4,6 +4,7 @@ import { buildSchema } from "type-graphql";
 import { User } from "./graphql/resolvers/User";
 import { Post } from "./graphql/resolvers/Post";
 import { ApolloServer } from "apollo-server-express";
+import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 import { config } from "dotenv-safe";
 
 
@@ -18,13 +19,22 @@ async function init () {
     	emitSchemaFile: true,
     	validate: false,
   	});
-  	const apollo = new ApolloServer({schema})
+  	const apollo = new ApolloServer({
+		plugins: [
+			ApolloServerPluginLandingPageGraphQLPlayground({
+					settings: {
+							'request.credentials': 'include',
+					},
+			})],
+		  schema, 
+
+	});
   	await apollo.start();
 	const app = App();
 	app.listen(process.env.SERVER_PORT, function (){
 		console.log(`Server started on port ${process.env.SERVER_PORT}`);
 	});
-	apollo.applyMiddleware({app});
+	apollo.applyMiddleware({app, cors: false});
 
 }
 
