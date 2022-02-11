@@ -21,6 +21,7 @@ const App = (props: AppProps) => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps}/>
+        
       </ThemeProvider>
     </React.Fragment>
   );
