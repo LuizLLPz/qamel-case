@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import router from 'next/router';
 
   type NavProps = {
     logado: boolean;
@@ -26,13 +27,13 @@ export const Nav = (props: NavProps) => (
       {!props.logado ? (
           <>
             <NavLink onClick={() => alert('Registrar!')}>Registrar</NavLink>
-            <NavLink onClick={() => alert('Logar!')}>Fazer Login</NavLink>
+            <NavLink>Fazer Login</NavLink>
           </>
           ) : (
         <>
-          <NavLink onClick={() => alert('Home!')}>Home</NavLink>
-          <NavLink onClick={() => alert('Perfil!')}>Perfil</NavLink>
-          <NavLink onClick={() => alert('Sair!')}>Deslogar</NavLink>
+          <NavLink>Home</NavLink>
+          <NavLink>Perfil</NavLink>
+          <NavLink>Deslogar</NavLink>
         </> 
         )
       }
