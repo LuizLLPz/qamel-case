@@ -3,14 +3,14 @@ import { Nav } from '../components/StyledNav';
 import { MainHeading } from '../components/StyledTypografy';
 import { MainButton } from '../components/StyledButtons';
 import { btnContainerStyle as btnStyle } from '../../styles/simpleStyles';
-const Home: NextPage = () => {
 
- 
+
+const Home: NextPage = () => {
 
   const logado = false;
 
   return (
-    <div className="body">
+    <div>
       <Nav logado={logado}/>
       <MainHeading>
          Conecte idéias e ame a tecnologia pelo Brasil!

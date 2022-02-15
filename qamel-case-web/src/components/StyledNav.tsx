@@ -26,7 +26,7 @@ export const Nav = (props: NavProps) => (
     <NavContainer>
       {!props.logado ? (
           <>
-            <NavLink onClick={() => alert('Registrar!')}>Registrar</NavLink>
+            <NavLink onClick={() => router.push('register')}>Registrar</NavLink>
             <NavLink>Fazer Login</NavLink>
           </>
           ) : (

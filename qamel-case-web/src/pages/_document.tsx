@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
         </Head>
-        <body>
+        <body style={{backgroundColor: "#0C0E0F"}}>
           <Main />
           <NextScript />
         </body>
