@@ -1,2 +1,2 @@
 # qamel-case
-Rede social feita com NextJS, seu desenvolvimento é feito conforme vou estudando novos tópicos.
+Rede social sendo feita com Typescript, NextJS, Express e GraphQL seu desenvolvimento é feito conforme vou estudando novos tópicos.
