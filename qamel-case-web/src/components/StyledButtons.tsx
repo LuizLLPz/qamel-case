@@ -12,4 +12,5 @@ export const MainButton = styled.div`
     font-size: 24px;
     border-radius: 12px;
     cursor: pointer;
+    user-select: none;
 `

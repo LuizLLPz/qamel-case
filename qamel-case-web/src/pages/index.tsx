@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import router from 'next/router';
 import { Nav } from '../components/StyledNav';
 import { MainHeading } from '../components/StyledTypografy';
 import { MainButton } from '../components/StyledButtons';
@@ -17,8 +18,8 @@ const Home: NextPage = () => {
       </MainHeading>
       {!logado && (
         <div style={btnStyle}>
-          <MainButton>Registrar</MainButton>
-          <MainButton>Fazer Login</MainButton>
+          <MainButton onClick={() => router.push('/register')}>Registrar</MainButton>
+          <MainButton onClick={() => router.push('/login')}>Fazer Login</MainButton>
         </div>
       )}
     </div>

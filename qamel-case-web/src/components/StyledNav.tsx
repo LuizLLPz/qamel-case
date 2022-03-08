@@ -20,6 +20,7 @@ export const NavLink = styled.div`
   color: blue;
   font-weight: bold;
   cursor: pointer;
+  user-select: none;
 `;
 
 export const Nav = (props: NavProps) => (
