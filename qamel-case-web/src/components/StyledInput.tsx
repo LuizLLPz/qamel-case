@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 
-const inputModel = ({ className, name, text, placeholder }) => {
+const inputModel = ({ className, name, text, placeholder, type, onChange}) => {
     return (
         <>
             <label>{text}</label>
-            <input className={className} placeholder={placeholder}/>
+            <input className={className} type={type ? type : 'text'}
+            placeholder={placeholder} name={name} 
+            onChange={onChange}/>
         </>
     )
 }

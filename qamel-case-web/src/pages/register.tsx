@@ -27,15 +27,14 @@ const registerMutation = async (e: any) => {
 	console.log(e);
 	const mutation = gql`
 	mutation {
-		register(username: "Bianca", password: "likeaboss"
-		email: "bia123@gmail.com"
+		register(username: "${formValues.uname}", password: "${formValues.pass}"
+		email: "${formValues.email}"
 		)
-	}
+	  }
 	`;
 	await client.mutate({
 		mutation
 	});
-	alert('vamo porra!');
 		
 }
 
@@ -58,9 +57,9 @@ const registerMutation = async (e: any) => {
 				}>
 				<InputModel placeholder="Nome de usuário" bg={bg} color={color} name="uname" 
 				value={formValues.uname} onChange={handleChange}></InputModel>
-				<InputModel placeholder="Email" bg={bg} color={color} name="email" 
+				<InputModel placeholder="Email" type="email" bg={bg} color={color} name="email" 
 				value={formValues.email} onChange={handleChange}></InputModel>
-				<InputModel placeholder="Senha" bg={bg} color={color} name="pass" 
+				<InputModel placeholder="Senha" type="password" bg={bg} color={color} name="pass" 
 				value={formValues.pass} onChange={handleChange}></InputModel>
 				<input type="submit" value="Registrar"/>
 			</Form>
