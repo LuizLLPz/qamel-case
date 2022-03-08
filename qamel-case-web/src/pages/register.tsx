@@ -23,8 +23,7 @@ const Register: NextPage = () => {
 	const [formValues, setFormValues] = useState({uname: '', email: '', pass: ''});
 	
 
-const registerMutation = async (e: any) => {
-	console.log(e);
+const registerMutation = async () => {
 	const mutation = gql`
 	mutation {
 		register(username: "${formValues.uname}", password: "${formValues.pass}"
@@ -50,18 +49,14 @@ const registerMutation = async (e: any) => {
 	return (
 		<>
 			<MainHeading>Registrar</MainHeading>
-			<Form onSubmit={(e) => {
-					registerMutation(e)
-					e.preventDefault()
-				}
-				}>
+			<Form>
 				<InputModel placeholder="Nome de usuário" bg={bg} color={color} name="uname" 
 				value={formValues.uname} onChange={handleChange}></InputModel>
 				<InputModel placeholder="Email" type="email" bg={bg} color={color} name="email" 
 				value={formValues.email} onChange={handleChange}></InputModel>
 				<InputModel placeholder="Senha" type="password" bg={bg} color={color} name="pass" 
 				value={formValues.pass} onChange={handleChange}></InputModel>
-				<input type="submit" value="Registrar"/>
+				<MainButton onClick={registerMutation}>Registrar</MainButton>
 			</Form>
 		</>
 	);
