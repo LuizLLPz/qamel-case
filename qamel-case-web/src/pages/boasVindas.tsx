@@ -14,14 +14,9 @@ const Home: NextPage = () => {
     <div>
       <Nav logado={logado}/>
       <MainHeading>
-         Conecte idéias e ame a tecnologia pelo Brasil!
+         Seja Bem vindo ao Qamel Case comece a explorar agora!!!
       </MainHeading>
-      {!logado && (
-        <div style={btnStyle}>
-          <MainButton onClick={() => router.push('/register')}>Registrar</MainButton>
-          <MainButton onClick={() => router.push('/login')}>Fazer Login</MainButton>
-        </div>
-      )}
+
     </div>
   );
 };

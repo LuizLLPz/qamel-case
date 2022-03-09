@@ -34,7 +34,7 @@ async function init () {
 	app.listen(process.env.SERVER_PORT, function (){
 		console.log(`Server started on port ${process.env.SERVER_PORT}`);
 	});
-	apollo.applyMiddleware({app, cors: false});
+	apollo.applyMiddleware({app, cors: {origin: 'http://localhost:3000'}});
 
 }
 

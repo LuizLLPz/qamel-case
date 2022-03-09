@@ -10,7 +10,7 @@ const App = (props: AppProps) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Next App</title>
+        <title>Qamel Case</title>
         <link href="/favicon.ico" rel="icon" />
         <meta
           content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -19,7 +19,8 @@ const App = (props: AppProps) => {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <Component {...pageProps}/>
+        
       </ThemeProvider>
     </React.Fragment>
   );
