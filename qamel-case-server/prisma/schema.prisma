@@ -1,10 +1,11 @@
-datasource db {
-  url      = env("SERVER_HOST")
-  provider = "postgresql"
-}
-
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("SERVER_HOST")
 }
 
 model User {
