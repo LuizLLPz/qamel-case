@@ -3,7 +3,6 @@ import router from 'next/router';
 import { Nav } from '../components/StyledNav';
 import { MainHeading } from '../components/StyledTypografy';
 import { MainButton } from '../components/StyledButtons';
-import { btnContainerStyle as btnStyle } from '../../styles/simpleStyles';
 
 
 const Home: NextPage = () => {
@@ -16,7 +15,9 @@ const Home: NextPage = () => {
       <MainHeading>
          Seja Bem vindo ao Qamel Case comece a explorar agora!!!
       </MainHeading>
-
+      <MainButton onClick={() => router.push('/')}>
+        Voltar
+      </MainButton>
     </div>
   );
 };
