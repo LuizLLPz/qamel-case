@@ -5,19 +5,21 @@ __dirname;
 import { MainHeading } from '../components/StyledTypografy';
 import { MainButton } from '../components/StyledButtons';
 import { InputModel } from '../components/StyledInput';
+import { Form } from '../components/StyledContainers';
 import { gql } from "@apollo/client";
 import client from '../utils/ApolloClient';
-import styled from 'styled-components';
+;
 
 const bg = '#f5f5f5';
 const color = 'blue';
 
-const Form = styled.form`
-    color: ${color};
-	display: grid;
-	padding-left: 50px;
-	grid-gap: 5px;
-`;
+const checkAvailability = async (id: String) => {
+	const query = gql`query checkUser($id: ${id})`
+	const availability = await client.query({
+	  query
+	});
+	return availability;
+}
 
 
 const Register: NextPage = () => {
@@ -43,9 +45,13 @@ const registerMutation = async () => {
 		alert("Fer merda filho.");
 	}
 }
-
+	const useError = (e: String) => console.log(e);
 
 	const handleChange = (e: any) => {
+		const available = checkAvailability(e.target.value);
+		if (!available) {
+			useError('Username already taken');
+		}
 		setFormValues({
 			...formValues,
 			[e.target.name]: e.target.value
@@ -56,7 +62,7 @@ const registerMutation = async () => {
 	return (
 		<>
 			<MainHeading>Registrar</MainHeading>
-			<Form>
+			<Form color={color}>
 				<label htmlFor="uname">Nome de Usuário:</label>
 				<InputModel placeholder="Nome de usuário" bg={bg} color={color} name="uname" 
 				value={formValues.uname} onChange={handleChange}></InputModel>
