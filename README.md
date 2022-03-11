@@ -16,3 +16,7 @@
 ### Bancos de dados utilizados:
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+
+
+## Notas
+Para o aplicativo funcionar é necessário ter um servidor postgres e redis instalados, podendo ser localmente ou por um serviço de nuvem.
