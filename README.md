@@ -24,4 +24,5 @@ Podendo ser localmente ou por um serviço de nuvem.
 
 ## Variáveis de ambiente
 SERVER_HOST: URI do banco de dados utilizado, no caso postgres (é possível trocar o banco de dados alterando o schema e gerando uma nova configuração do prisma).
-SERVER_PORT: PORTA onde o servidor vai escutar
+
+SERVER_PORT: Porta onde o servidor vai escutar
