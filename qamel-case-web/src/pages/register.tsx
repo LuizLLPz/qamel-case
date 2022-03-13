@@ -32,17 +32,32 @@ const registerMutation = async () => {
 	mutation {
 		register(username: "${formValues.uname}", password: "${formValues.pass}"
 		email: "${formValues.email}"
-		)
+		) {
+			id, 
+			error {
+					message
+			}
+		}
 	  }
 	`;
-	const res = await client.mutate({
-		mutation
-	});
-	console.log(res);
-	if (res.data.register === 'OK') {
+	const { data : {
+				register : {
+					id,
+					error : {
+						message
+					}
+				}	
+			}
+		} = await client.mutate(
+			{
+				mutation
+			}
+	);
+	if (id) {
+		localStorage.setItem('gid', id);
 		router.push('/boasVindas');
 	} else {
-		alert("Fer merda filho.");
+		alert(`An error ocurred when trying to register! Message: ${message}`);
 	}
 }
 	const useError = (e: String) => console.log(e);

@@ -18,16 +18,22 @@ const Home: NextPage = () => {
           user {
             username,
             email
+          }, 
+          error {
+            message
           }
         }
       }
       `;
-    const result = await client.query({
+    const res = await client.query({
       query,
     });
-    if (result.data.checkToken.user) {
-       const { username } = result.data.checkToken.user;
+    if (res.data.checkToken.user) {
+        const { username } = res.data.checkToken.user;
         setUser({logado: true, username});
+    }
+    else if (res.data.checkToken.error) {
+        localStorage.removeItem('gid');
     }
   };
 

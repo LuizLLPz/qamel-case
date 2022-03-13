@@ -16,9 +16,9 @@ class UserType {
 
 @ObjectType()
 class ErrorType {
-	@Field()
+	@Field(() => String, { nullable: true })
 	title: string
-	@Field()
+	@Field(() => String, { nullable: true })
 	message: string
 }
 
@@ -29,7 +29,7 @@ class res {
 	user?: UserType
 	@Field(() => ErrorType, { nullable: true })
 	error?: ErrorType
-	@Field((() => String))
+	@Field((() => String), { nullable: true })
 	id?: String
 }
 
@@ -76,12 +76,24 @@ export class User {
 					},
 					id: gen
 					
-				}
-			} else {
-				return { error: { title: 'Wrong Password', message: 'Incorrect password!' } };
+				};
+			} 
+			else {
+				return {
+					error: {
+						title: 'Wrong Password',
+						message: 'Incorrect password!' 
+					} 
+				};
 			}
-		} else {
-			return { error: { title: 'No users found', message: 'No users found with passed email or username!' } };
+		} 
+		else {
+			return {
+				error: {
+					 title: 'No users found',
+					 message: 'No users found with passed email or username!' 
+					} 
+				};
 		}
 	}
 
@@ -99,18 +111,30 @@ export class User {
 				where: {
 					id: uid
 				}
-		});
+			}); 
+			if (user)  {
+			    return {
+					user:  {
+						username: user.username,
+						email: user.email,
+					}
+				};
+
+		    }
+			redis.del(token);
 			return {
-				user:  {
-					username: user.username,
-					email: user.email,
+				user: null,
+				error: {
+						title: 'Session error', 
+						message: 'Unable to login automatically, please login again'
 				}
-			}
-		} else {
+			};
+		}	
+		else {
 			return {
 				 error: { 
-					title: 'No token found',
-					message: 'No token found!' 
+					title: 'Invalid token',
+					message: 'No token found or expired token detected!' 
 				} 
 			};
 		}
@@ -152,7 +176,7 @@ export class User {
 
 
 
-	@Mutation(() => String)
+	@Mutation(() => res)
 	async register(
 		@Arg('username') username: string,
 		@Arg('email') email: string,
@@ -160,17 +184,30 @@ export class User {
 	) {
 		const hPass = await argon2.hash(password);
 		try {
-			await client.user.create({
+			const { id } = await client.user.create({
 				data: {
 					username,
 					email,
 					password: hPass,
 				}
 			});
-			return 'OK'
+			const gen = uuid();
+			redis.set(gen, id, 'EX', 60 * 60 * 24 * 7);
+			return {
+				id: gen,
+				error : {
+					message: null
+				}
+			}
+			
 		} catch (error) {
 			console.log(error);
-			return '500 - Internal error when creating user, contact the administrator';
+			return {
+				error : {
+					title: 'Register error',
+					message: '500 - Internal error when creating user, contact the administrator'
+				}
+			};
 		}
 
 	}
