@@ -4,5 +4,5 @@ import { config } from "dotenv-safe";
 config();
 
 export const client = asyncRedis.createClient({
-    host: process.env.REDIS_HOST,
+    url: process.env.REDIS_URI,
 });

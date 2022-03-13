@@ -38,6 +38,6 @@ $ yarn watch
 Após isso é necessário criar as variáveis de ambiente para o servidor inicializar corretamente criar arquivo .env com as seguintes variáveis definidas com seus respectivos valores
 
 ## Variáveis de ambiente
-SERVER_HOST: URI do banco de dados utilizado, no caso postgres (é possível trocar o banco de dados modificando o schema.prisma e gerando uma nova configuração do prisma)  
-REDIS_HOST: URI do banco de dados redis  
+SERVER_URI: URI do banco de dados utilizado, no caso postgres (é possível trocar o banco de dados modificando o schema.prisma e gerando uma nova configuração do prisma)  
+REDIS_URI: URI do banco de dados redis  
 SERVER_PORT: Porta onde o servidor vai escutar  
