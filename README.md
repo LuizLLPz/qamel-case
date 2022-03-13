@@ -22,7 +22,22 @@
 Para o aplicativo funcionar é necessário ter um servidor postgres e redis instalados.
 Podendo ser localmente ou por um serviço de nuvem.
 
-## Variáveis de ambiente
-SERVER_HOST: URI do banco de dados utilizado, no caso postgres (é possível trocar o banco de dados alterando o schema e gerando uma nova configuração do prisma).
+## Testando o servidor
+Primeiro é necessário entrar no diretório do servidor
+```console
+$ cd qamel-case-server
+```
+Depois é necessário transpilar o código para Javascript:
+```console
+$ npm run watch 
+```
+ou: 
+```console
+$ yarn watch 
+```
+Após isso é necessário criar as variáveis de ambiente para o servidor inicializar corretamente criar arquivo .env com as seguintes variáveis definidas com seus respectivos valores
 
-SERVER_PORT: Porta onde o servidor vai escutar
+## Variáveis de ambiente
+SERVER_HOST: URI do banco de dados utilizado, no caso postgres (é possível trocar o banco de dados modificando o schema.prisma e gerando uma nova configuração do prisma)  
+REDIS_HOST: URI do banco de dados redis  
+SERVER_PORT: Porta onde o servidor vai escutar  
