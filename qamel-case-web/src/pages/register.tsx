@@ -60,13 +60,8 @@ const registerMutation = async () => {
 		alert(`An error ocurred when trying to register! Message: ${message}`);
 	}
 }
-	const useError = (e: String) => console.log(e);
 
 	const handleChange = (e: any) => {
-		//const available = checkAvailability(e.target.value);
-		// if (!available) {
-		// 	useError('Username already taken');
-		// }
 		setFormValues({
 			...formValues,
 			[e.target.name]: e.target.value

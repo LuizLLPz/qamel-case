@@ -3,6 +3,7 @@ import { User as UserEntity } from "../entities/User";
 import { client } from "../../utils/PrismaClient";
 import { client as redis} from "../../utils/RedisClient";
 import { v4 as uuid } from "uuid";
+import { sg } from "../../utils/SendGridClient";
 import argon2 from "argon2";
 
 @ObjectType()
@@ -192,7 +193,21 @@ export class User {
 				}
 			});
 			const gen = uuid();
-			redis.set(gen, id, 'EX', 60 * 60 * 24 * 7);
+			redis.set(gen, id, 'EX', 60 * 60 * 24 * 7);]
+			const mail = {
+				to: 'test@example.com',
+				from: 'test@examle.com',
+				subject: 'Sending with SendGrid is Fun',
+				text: 'and easy to do anywhere, even with Node.js',
+				html: '<strong>Test email</strong>',
+			  }
+			try {
+				const result = await sg.send(mail);
+				console.log(result);
+			}
+			catch (error) {
+				console.log(error);
+			}
 			return {
 				id: gen,
 				error : {
