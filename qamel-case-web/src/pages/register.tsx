@@ -13,13 +13,13 @@ import client from '../utils/ApolloClient';
 const bg = '#f5f5f5';
 const color = 'blue';
 
-const checkAvailability = async (id: String) => {
-	const query = gql`query checkUser($id: ${id})`
-	const availability = await client.query({
-	  query
-	});
-	return availability;
-}
+// const checkAvailability = async (id: String) => {
+// 	const query = gql`query checkUser($id: ${id})`
+// 	const availability = await client.query({
+// 	  query
+// 	});
+// 	return availability;
+// }
 
 
 const Register: NextPage = () => {
@@ -48,10 +48,10 @@ const registerMutation = async () => {
 	const useError = (e: String) => console.log(e);
 
 	const handleChange = (e: any) => {
-		const available = checkAvailability(e.target.value);
-		if (!available) {
-			useError('Username already taken');
-		}
+		//const available = checkAvailability(e.target.value);
+		// if (!available) {
+		// 	useError('Username already taken');
+		// }
 		setFormValues({
 			...formValues,
 			[e.target.name]: e.target.value

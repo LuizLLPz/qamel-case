@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import router from 'next/router';
 import { useState } from 'react';
-import { Nav } from '../components/StyledNav';
 import { MainHeading } from '../components/StyledTypografy';
 import { MainButton } from '../components/StyledButtons';
 import { Form } from '../components/StyledContainers';
@@ -19,7 +18,7 @@ type formValues = {
 const Home: NextPage = () => {
     const [formValues, setFormValues] = useState({id: '', pass: ''});
     const [logado, setLogado] = useState(false);
-    const [user, setUser] = useState({name: '', email: ''});
+    const [user, setUser] = useState({username: '', email: ''});
 
     const handleChange = (e: any) => {
         setFormValues({
@@ -38,7 +37,8 @@ const Home: NextPage = () => {
                 }, 
                 error {
                     message
-                }
+                },
+                id
             }
         }
     
@@ -49,9 +49,11 @@ const Home: NextPage = () => {
         });
         console.log(res);
         if (res.data.login.error) {
-            alert(`Ocorreu um erro!. ${res.data.login.error.message}`);
+            alert(`Ocorreu um erro! Mensagem de erro: ${res.data.login.error.message}`);
         } 
         else {
+            console.log(res.data.login);
+            localStorage.setItem('gid', res.data.login.id);
             setLogado(true);
             setUser(res.data.login.user);
         }
@@ -61,7 +63,15 @@ const Home: NextPage = () => {
     return (
         <div>
             <MainHeading>
-                {!logado ? 'Fazer Login' : `Logado como  ${user.username}`}
+                {!logado ? 'Fazer Login' : 
+                    <>
+                        {`Logado como  ${user.username}`}
+                           <MainButton onClick={() => router.push('/')}>
+                                 Voltar
+                           </MainButton>
+                    </>
+                
+                }
             </MainHeading>
             {!logado && 
                 <Form>

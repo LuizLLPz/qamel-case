@@ -11,6 +11,7 @@ import { config } from "dotenv-safe";
 async function init () {
 
 	config();
+	
 	const schema = await buildSchema({
     	resolvers: [
     		User,
