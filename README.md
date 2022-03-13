@@ -35,7 +35,7 @@ ou:
 ```console
 $ yarn watch 
 ```
-Após isso é necessário criar as variáveis de ambiente para o servidor inicializar corretamente criar arquivo .env com as seguintes variáveis definidas com seus respectivos valores
+Após isso é necessário criar o arquivo .env com as seguintes variáveis de ambiente definidas com seus respectivos valores para o servidor funcionar corretamente
 
 ## Variáveis de ambiente
 SERVER_URI: URI do banco de dados utilizado, no caso postgres (é possível trocar o banco de dados modificando o schema.prisma e gerando uma nova configuração do prisma)  
