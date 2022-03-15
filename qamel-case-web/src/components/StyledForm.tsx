@@ -41,11 +41,11 @@ export const formValidation = (element: any, value: string, key: string, setErro
    if (error) {
         element.style.color = 'red';
         setError(error);
-        return true;
+        return false;
    } else {
        setError('');
        element.style.color = 'gray';
-       return false;
+       return true;
    }
 }
 
