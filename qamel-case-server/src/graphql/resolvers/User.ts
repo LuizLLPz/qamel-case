@@ -2,6 +2,7 @@ import { Resolver, Query, Mutation, Arg, ObjectType, Field } from "type-graphql"
 import { User as UserEntity } from "../entities/User";
 import { client } from "../../utils/PrismaClient";
 import { client as redis} from "../../utils/RedisClient";
+import welcome from "../../emails/welcome";
 import { v4 as uuid } from "uuid";
 import { sg } from "../../utils/SendGridClient";
 import argon2 from "argon2";
@@ -117,6 +118,7 @@ export class User {
 					user: {
 						username,
 						email,
+						html: welcome(username)
 					},
 					id: gen
 					
@@ -162,13 +164,13 @@ export class User {
 				}
 			});
 			const gen = uuid();
-			redis.set(gen, id, 'EX', 60 * 60 * 24 * 7);
+			redis.set(gen, id, 'EX', 60 * 60 * 24 * 7); // 7 days expiration time
 			const mail = {
 				to: email,
 				from: process.env.SENDGRID_EMAIL,
 				subject: 'Bem vindo ao qamel case!',
 				text: 'Você conseguiu se cadastrar no qamel case!',
-				html: `<strong>Bem vindo ao qamel case <s>${username}</s>. Espero que aproveite ao máximo o website!!!</strong>`,
+				html: 
 			  }
 			try {
 				const result = await sg.send(mail);

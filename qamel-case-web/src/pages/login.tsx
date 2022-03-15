@@ -6,7 +6,7 @@ import { MainButton } from '../components/StyledButtons';
 import { Form } from '../components/StyledContainers';
 import { gql } from "@apollo/client";
 import client from '../utils/ApolloClient';
-import { InputModel } from '../components/StyledInput';
+import { InputModel, formValidation } from '../components/StyledForm';
 
 type formValues = {
     id: String,
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         });
         console.log(res);
         if (res.data.login.error) {
-            alert(`Ocorreu um erro! Mensagem de erro: ${res.data.login.error.message}`);
+            formValidation(true, error.message);
         } 
         else {
             console.log(res.data.login);
@@ -70,7 +70,6 @@ const Home: NextPage = () => {
                                  Voltar
                            </MainButton>
                     </>
-                
                 }
             </MainHeading>
             {!logado && 

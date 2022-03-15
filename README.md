@@ -41,3 +41,6 @@ Após isso é necessário criar o arquivo .env com as seguintes variáveis de am
 SERVER_URI: URI do banco de dados utilizado, no caso postgres (é possível trocar o banco de dados modificando o schema.prisma e gerando uma nova configuração do prisma)  
 REDIS_URI: URI do banco de dados redis  
 SERVER_PORT: Porta onde o servidor vai escutar  
+SENDGRID_EMAIL= Email utilizado no sistema de mensageria
+SENDGRID_API_KEY= Chave de API do sistema de mensageria
+
