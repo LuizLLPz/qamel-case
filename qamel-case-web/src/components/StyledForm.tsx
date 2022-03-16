@@ -13,6 +13,7 @@ type inputModelAttrs = {
 const ErrorLabel = styled.span`
     color: red;
     font-size: 12px;
+    height: 20px;
 `;  
 
 const validationObject = {
@@ -40,11 +41,13 @@ export const formValidation = (element: any, value: string, key: string, setErro
    const error = validationObject[key](value);
    if (error) {
         element.style.color = 'red';
+        element.style.outline = '2px solid red';
         setError(error);
         return false;
    } else {
        setError('');
        element.style.color = 'black';
+       element.style.outline = '2px solid blue';
        return true;
    }
 }
@@ -58,8 +61,10 @@ const inputModel = ({ className, name, text, placeholder, type, onChange} : inpu
                 <input className={className} type={type ? type : 'text'}
                 placeholder={placeholder} name={name} 
                 onChange={(e) => onChange(e, setError)}
+                onFocus={(e) => e.target.style.outline = '2px solid blue'}
+                onBlur ={(e) => e.target.style.outline = 'none'}
             />
-            {error ? <ErrorLabel>{error}</ErrorLabel> : ''}
+            <ErrorLabel>{error ? error : ''}</ErrorLabel>
         </>
     )
 }
