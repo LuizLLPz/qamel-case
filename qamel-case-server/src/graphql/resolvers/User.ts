@@ -2,7 +2,7 @@ import { Resolver, Query, Mutation, Arg, ObjectType, Field } from "type-graphql"
 import { User as UserEntity } from "../entities/User";
 import { client } from "../../utils/PrismaClient";
 import { client as redis} from "../../utils/RedisClient";
-import welcome from "../../emails/welcome";
+import { welcome } from "../../emails/welcome";
 import { v4 as uuid } from "uuid";
 import { sg } from "../../utils/SendGridClient";
 import argon2 from "argon2";
@@ -170,7 +170,7 @@ export class User {
 				from: process.env.SENDGRID_EMAIL,
 				subject: 'Bem vindo ao qamel case!',
 				text: 'Você conseguiu se cadastrar no qamel case!',
-				html: 
+				html: welcome(username)
 			  }
 			try {
 				const result = await sg.send(mail);

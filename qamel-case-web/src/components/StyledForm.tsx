@@ -44,7 +44,7 @@ export const formValidation = (element: any, value: string, key: string, setErro
         return false;
    } else {
        setError('');
-       element.style.color = 'gray';
+       element.style.color = 'black';
        return true;
    }
 }

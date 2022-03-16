@@ -1,30 +1,18 @@
-import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
 import router from 'next/router';
 import { Nav } from '../components/StyledNav';
 import { MainHeading } from '../components/StyledTypografy';
 import { MainButton } from '../components/StyledButtons';
 import { btnContainerStyle as btnStyle } from '../../styles/simpleStyles';
-import { gql } from '@apollo/client';
+import { checkToken as check} from "../graphql/queries/User";
 import client from '../utils/ApolloClient';
 
 const Home: NextPage = () => {
   const [user, setUser] = useState({logado: false, username: ''});
 
   const checkToken = async () => {
-    const query = gql`
-      {
-        checkToken (token: "${localStorage.getItem('gid')}") {
-          user {
-            username,
-            email
-          }, 
-          error {
-            message
-          }
-        }
-      }
-      `;
+    const query = check();
     const res = await client.query({
       query,
     });

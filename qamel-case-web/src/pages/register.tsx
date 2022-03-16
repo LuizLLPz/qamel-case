@@ -5,8 +5,8 @@ __dirname;
 import { MainHeading } from '../components/StyledTypografy';
 import { MainButton } from '../components/StyledButtons';
 import { InputModel, formValidation } from '../components/StyledForm';
+import { registerMutation as register} from '../graphql/mutations/User';
 import { Form } from '../components/StyledContainers';
-import { gql } from "@apollo/client";
 import client from '../utils/ApolloClient';
 ;
 
@@ -21,18 +21,7 @@ const Register: NextPage = () => {
 const registerMutation = async () => {
 	const {uname, email, pass} = formValues;
 	if (!valid) return;
-	const mutation = gql`
-	mutation {
-		register(username: "${uname}", password: "${pass}"
-		email: "${email}"
-		) {
-			id, 
-			error {
-					message
-			}
-		}
-	  }
-	`;
+	const mutation = register(uname, email, pass);
 	const { data : {
 				register : {
 					id,
