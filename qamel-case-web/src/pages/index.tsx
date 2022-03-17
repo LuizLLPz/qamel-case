@@ -13,14 +13,14 @@ const Home: NextPage = () => {
 
   const checkToken = async () => {
     const query = check();
-    const res = await client.query({
+    const {data : {checkToken}} = await client.query({
       query,
     });
-    if (res.data.checkToken.user) {
-        const { username } = res.data.checkToken.user;
+    if (checkToken.user) {
+        const { username } = checkToken.user;
         setUser({logado: true, username});
     }
-    else if (res.data.checkToken.error) {
+    else if (checkToken.error) {
         localStorage.removeItem('gid');
     }
   };

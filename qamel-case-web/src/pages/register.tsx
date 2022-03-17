@@ -15,26 +15,14 @@ const color = 'blue';
 
 const Register: NextPage = () => {
 
-	const [formValues, setFormValues] = useState({uname: '', email: '', pass: ''});
+	const [formValues, setFormValues] = useState({username: '', email: '', password: ''});
 	const [valid, setValid] = useState(false);
 
 const registerMutation = async () => {
-	const {uname, email, pass} = formValues;
+	const {username, email, password} = formValues;
 	if (!valid) return;
-	const mutation = register(uname, email, pass);
-	const { data : {
-				register : {
-					id,
-					error : {
-						message
-					}
-				}	
-			}
-		} = await client.mutate(
-			{
-				mutation
-			}
-	);
+	const mutation = register(username, email, password);
+	const {data : { register : {id, error: {message}}}} = await client.mutate({mutation})
 	if (id) {
 		localStorage.setItem('gid', id);
 		router.push('/boasVindas');

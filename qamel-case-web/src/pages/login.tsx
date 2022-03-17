@@ -16,7 +16,7 @@ type formValues = {
 
 
 const Home: NextPage = () => {
-    const [formValues, setFormValues] = useState({id: '', pass: ''});
+    const [formValues, setFormValues] = useState({username: '', password: ''});
     const [valid, setValid] = useState(false);
     const [logado, setLogado] = useState(false);
     const [user, setUser] = useState({username: '', email: ''});
@@ -30,17 +30,17 @@ const Home: NextPage = () => {
     }
 
     const loginQuery =  async () => {
-        const {id, pass} = formValues;
+        const {username, password} = formValues;
         if (!valid) return;
-        const query = login(id, pass);   
-        const res = await client.query({
+        const query = login(username, password);  
+        const {data: {login : loginRes}} = await client.query({
             query
-        });
-        console.log(res);
-        console.log(res.data.login);
-        localStorage.setItem('gid', res.data.login.id);
-        setLogado(true);
-        setUser(res.data.login.user);
+        })
+        if (loginRes.id) {
+            localStorage.setItem('gid', loginRes.id);
+            setLogado(true);
+            setUser(loginRes.user);
+        }
     }
     
 
@@ -58,8 +58,8 @@ const Home: NextPage = () => {
             </MainHeading>
             {!logado && 
                 <Form>
-                    <InputModel placeholder="Nome de usuário ou email" value={formValues.id} name="username" onChange={handleChange}/>
-                    <InputModel placeholder="Senha" type="password" value={formValues.pass} name="password" onChange={handleChange}/>
+                    <InputModel placeholder="Nome de usuário ou email" value={formValues.username} name="username" onChange={handleChange}/>
+                    <InputModel placeholder="Senha" type="password" value={formValues.password} name="password" onChange={handleChange}/>
                     <MainButton onClick={loginQuery}>
                         Login
                     </MainButton>
