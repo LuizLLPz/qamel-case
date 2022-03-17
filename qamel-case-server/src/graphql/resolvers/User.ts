@@ -34,6 +34,8 @@ class res {
 	error?: ErrorType
 	@Field((() => String), { nullable: true })
 	id?: String
+	@Field((() => Boolean), { nullable: true })
+	perm?: Boolean
 }
 
 @Resolver()
@@ -45,6 +47,42 @@ export class User {
 		return users;
 	}
 	
+
+
+	
+	@Query(() => res)
+	async checkUser(
+		@Arg('token') id: string,
+		@Arg('username') username: string
+	) {
+		const uid = await redis.get(id);
+		const user = await client.user.findUnique({
+			where: {
+				username
+			}
+		});
+		const localUser = await client.user.findUnique({
+			where: {
+				id: uid
+			}
+		});
+
+		if (user && localUser) {
+			if (user.id === localUser.id) {
+				return {user : {username : user.username, email : user.email}, perm : true};
+			}
+			else {
+				return {user : {username : user.username, email : user.email}, perm : false};
+			}
+		} else if (user && !localUser) {
+			return {user : {username : user.username, email : user.email}, perm : false};
+		}
+		return {user : {username}, error : {title : "User not found", message : "User not found"}};
+
+
+	}
+
+
 
 	@Query(() => res)
 	async checkToken(
@@ -202,7 +240,7 @@ export class User {
 
 
 	@Query(() => Boolean)
-	async checkUser(
+	async checkAvailable(
 		@Arg('id') id: string
 	) {
 		const resultuser = await client.user.findUnique({

@@ -49,7 +49,7 @@ export const Nav = ({ logado, username }: NavProps) => (
     ) : (
       <>
         <NavLink>Home</NavLink>
-        <NavLink>{username}</NavLink>
+        <NavLink onClick={() => router.push(`/user/${username}`)}>{username}</NavLink>
         <NavLink onClick={deslogar}>Deslogar</NavLink>
       </>
     )}
