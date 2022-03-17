@@ -51,7 +51,6 @@ export class User {
 		@Arg('token') token: string
 	) {
 		const uid = Number(await redis.get(token));
-		console.log(uid);
 		if (uid) {
 			const user = await client.user.findUnique({
 				where: {
