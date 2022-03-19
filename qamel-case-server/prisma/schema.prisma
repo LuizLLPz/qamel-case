@@ -14,6 +14,7 @@ model User {
   username  String @unique
   password String
   posts   Post[]
+  subscriptions Subscription[]
 }
 
 
@@ -26,4 +27,18 @@ model Post {
   userID Int
 }
 
-  
+model Category {
+  id Int @id @default(autoincrement())
+  name String @unique
+  description String
+  subscriptions Subscription[]
+}
+
+model Subscription {
+  id Int @id @default(autoincrement())
+  user User @relation(fields: [userID], references: [id])
+  category Category @relation(fields: [postID], references: [id])
+  userID Int
+  postID Int
+
+}

@@ -1,37 +1,48 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { Container } from '../../components/StyledContainers';
 import { MainHeading } from '../../components/StyledTypografy';
 import { checkUser } from '../../graphql/queries/User';
 import client from '../../utils/ApolloClient';
+
+
+type userType = {
+  username: string,
+  email: string
+}
+
+const UserComponent = ({username, email}: userType) => {
+  return (
+    <Container>
+      <MainHeading>
+        {username}
+      </MainHeading>
+    </Container>
+  )
+}
 
 const User = () => {
   const router = useRouter()
   const [user, setUser] = useState({});
   let perm = false;
-  const { username } = router.query
-
+  const { username } = router.query;
   const getUser = async () => {
-    if (!username) {
-      router.push('/')
-    }
     const query = checkUser(username);
-    const {data: {checkUser : userRes}} = await client.query({
+    const {data} = await client.query({
       query,
-    })
-    if (userRes.user) {
-      perm = userRes.perm;
-      setUser(userRes.user);
-    }
+    });
+    
   }
   
   useEffect(() => {
-    getUser();
-  }, []);
+    if (user) getUser();
+  }, username);
 
   return (
     <div>
-      {user ? <MainHeading>{user.username}</MainHeading> : "404"}
-    </div>
+      {username}
+      {user ? <UserComponent/> : <MainHeading> 404 - Usuário não encontrado!</MainHeading>} 
+        </div>
   );
 }
 

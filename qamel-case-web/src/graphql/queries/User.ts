@@ -2,24 +2,25 @@ import { gql } from '@apollo/client';
 
 export const checkUser = (username: string) => {
   return gql`
-    query {
-      checkUser(token: "${localStorage.getItem('gid')}", username: "${username}"{
-        name
+  {
+    checkUser(token: "${localStorage.getItem('gid')}", username: "${username}") {
+      user {
+        username
         email
-      },
-      error: {
+      }
+      error {
         title
         message
-      },
+      }
       perm
     }
+  }
+  
   `;
-}
-
-
+};
 
 export const checkToken = () => {
-    return gql`>  
+  return gql`
       {
         checkToken (token: "${localStorage.getItem('gid')}") {
           user {
@@ -32,11 +33,10 @@ export const checkToken = () => {
         }
       }
       `;
-};      
-
+};
 
 export const loginQuery = (id: string, password: string) => {
-    return gql`
+  return gql`
     {
         login(username: "${id}", password: "${password}") {
           id,
@@ -50,4 +50,4 @@ export const loginQuery = (id: string, password: string) => {
         }
       }
       `;
-}
+};

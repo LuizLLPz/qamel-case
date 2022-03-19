@@ -55,30 +55,24 @@ export class User {
 		@Arg('token') id: string,
 		@Arg('username') username: string
 	) {
-		const uid = await redis.get(id);
+		const uid = Number(await redis.get(id));
 		const user = await client.user.findUnique({
 			where: {
 				username
-			}
-		});
-		const localUser = await client.user.findUnique({
+			},
+		})
+		const localUser = (uid != null) ? await client.user.findUnique({
 			where: {
 				id: uid
 			}
-		});
-
-		if (user && localUser) {
-			if (user.id === localUser.id) {
-				return {user : {username : user.username, email : user.email}, perm : true};
-			}
-			else {
-				return {user : {username : user.username, email : user.email}, perm : false};
-			}
-		} else if (user && !localUser) {
-			return {user : {username : user.username, email : user.email}, perm : false};
+		}) : null;
+		return {
+			user: {
+				username: user.username,
+				email: user.email
+			},
+			perm : true
 		}
-		return {user : {username}, error : {title : "User not found", message : "User not found"}};
-
 
 	}
 
