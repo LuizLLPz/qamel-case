@@ -66,12 +66,42 @@ export class User {
 				id: uid
 			}
 		}) : null;
-		return {
-			user: {
-				username: user.username,
-				email: user.email
-			},
-			perm : true
+		if (user) {
+			if (localUser) {
+				if (user.id === localUser.id) {
+					return {
+						user: {
+							username: user.username,
+							email: user.email,
+						},
+						perm: true
+					};
+				}
+				else {
+					return {
+						user: {
+							username: user.username,
+							email: user.email,
+						},
+						perm: false
+					};
+				}
+				
+			}
+			return {
+				user: {
+					username: user.username,
+					email: user.email,
+				},
+				perm: false
+			};	
+		} else {
+			return {
+				error: {
+					title: 'User not found',
+					message: 'User not found'
+				}
+			}
 		}
 
 	}
